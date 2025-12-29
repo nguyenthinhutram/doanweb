@@ -1,0 +1,1219 @@
+
+/*** Spinner Start ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .8s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+ }
+
+ #spinner.show {
+     transition: opacity .8s ease-out, visibility 0s linear .0s;
+     visibility: visible;
+     opacity: 1;
+ }
+
+ .back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+    z-index: 99;
+}
+/*** Spinner End ***/
+
+
+/*** Button Start ***/
+.btn {
+    font-weight: 600;
+    transition: .5s;
+}
+
+.btn-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-sm-square {
+    width: 34px;
+    height: 34px;
+}
+
+.btn-md-square {
+    width: 44px;
+    height: 44px;
+}
+
+.btn-lg-square {
+    width: 56px;
+    height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.btn.border-secondary {
+    transition: 0.5s;
+}
+
+.btn.border-secondary:hover {
+    background: var(--bs-secondary) !important;
+    color: var(--bs-white) !important;
+}
+
+/*** Topbar Start ***/
+.fixed-top {
+    transition: 0.5s;
+    background: var(--bs-white);
+    border: 0;
+}
+
+.topbar {
+    padding: 20px;
+    border-radius: 230px 100px;
+}
+
+.topbar .top-info {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link {
+    font-size: 15px;
+    line-height: 0;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .top-link a {
+    letter-spacing: 1px;
+}
+
+.topbar .top-link a small:hover {
+    color: var(--bs-secondary) !important;
+    transition: 0.5s;
+}
+
+.topbar .top-link a small:hover i {
+    color: var(--bs-primary) !important;
+}
+/*** Topbar End ***/
+
+/*** Navbar Start ***/
+.navbar .navbar-nav .nav-link {
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.navbar {
+    height: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link:hover,
+.fixed-top.bg-white .navbar .navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        visibility: hidden;
+        top: 100%;
+        transform: rotateX(-75deg);
+        transform-origin: 0% 0%;
+        border: 0;
+        transition: .5s;
+        opacity: 0;
+    }
+}
+
+.dropdown .dropdown-menu a:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-primary);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    transform: rotateX(0deg);
+    visibility: visible;
+    background: var(--bs-light) !important;
+    border-radius: 10px !important;
+    transition: .5s;
+    opacity: 1;
+}
+
+/* Navbar Cao Cấp */
+.navbar-light {
+    background: rgba(0, 0, 0, 0.98) !important; /* Đen sâu */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2); /* Viền vàng mảnh */
+    padding: 10px 0;
+}
+
+.navbar-brand h1 {
+    font-family: 'Cinzel', serif !important;
+    color: #D4AF37 !important; /* Màu Gold Metallic */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff !important;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 15px;
+    transition: 0.4s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #D4AF37 !important;
+}
+
+
+
+#searchModal .modal-content {
+    background: rgba(255, 255, 255, .8);
+}
+/*** Navbar End ***/
+
+/*** Hero Header ***/
+/* Xóa bỏ màu nền cũ và thiết lập nền Luxury */
+.hero-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('assets/imgs/banner-jewelry.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background-color: #000000 !important; /* Màu nền dự phòng nếu ảnh lỗi */
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    background: linear-gradient(rgba(255, 181, 36, 0.7), rgba(255, 181, 36, 0.7));
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    border: 1px solid var(--bs-white);
+    background: var(--bs-primary);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-next {
+    margin-right: 20px;
+}
+
+.carousel-control-prev {
+    margin-left: 20px;
+}
+
+.page-header {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(assets/imgs/banner/bia.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Cách 1: Tăng padding (khoảng cách trên và dưới) */
+    padding: 250px 0 120px 0 !important;
+}
+
+@media (min-width: 992px) {
+    .hero-header,
+    .page-header {
+        margin-top: 152px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-header,
+    .page-header {
+        margin-top: 97px !important;
+    }
+}
+/*** Hero Header end ***/
+
+
+/*** featurs Start ***/
+.featurs .featurs-item .featurs-icon {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.featurs .featurs-item .featurs-icon::after {
+    content: "";
+    width: 35px;
+    height: 35px;
+    background: var(--bs-secondary);
+    position: absolute;
+    bottom: -10px;
+    transform: translate(-50%);
+    transform: rotate(45deg);
+    background: var(--bs-secondary);
+    
+}
+/*** featurs End ***/
+
+
+/*** service Start ***/
+.service .service-item .service-content {
+    position: relative;
+    width: 250px; 
+    height: 130px; 
+    top: -50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+/*** service End ***/
+
+
+/*** Fruits Start ***/
+.fruite .tab-class .nav-item a.active {
+    background: var(--bs-secondary) !important;
+}
+
+.fruite .tab-class .nav-item a.active span {
+    color: var(--bs-white) !important; 
+}
+
+.fruite .fruite-categorie .fruite-name {
+    line-height: 40px;
+}
+
+.fruite .fruite-categorie .fruite-name a {
+    transition: 0.5s;
+}
+
+.fruite .fruite-categorie .fruite-name a:hover {
+    color: var(--bs-secondary);
+}
+
+.fruite .fruite-item {
+    height: 100%;
+    transition: 0.5s;
+}
+.fruite .fruite-item:hover {
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
+}
+
+.fruite .fruite-item .fruite-img {
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px 10px 0 0;
+}
+
+.fruite .fruite-item .fruite-img img {
+    transition: 0.5s;
+}
+
+.fruite .fruite-item .fruite-img img:hover {
+    transform: scale(1.3);
+}
+/*** Fruits End ***/
+
+
+/*** vesitable Start ***/
+.vesitable .vesitable-item {
+    height: 100%;
+    transition: 0.5s;
+}
+
+.vesitable .vesitable-item:hover {
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
+}
+
+.vesitable .vesitable-item .vesitable-img {
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px 10px 0 0;
+}
+
+.vesitable .vesitable-item .vesitable-img img {
+    transition: 0.5s;
+}
+
+.vesitable .vesitable-item .vesitable-img img:hover {
+    transform: scale(1.2);
+}
+
+.vesitable .owl-stage {
+    margin: 50px 0;
+    position: relative;
+}
+
+.vesitable .owl-nav .owl-prev {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    color: var(--bs-primary);
+    padding: 5px 25px;
+    border: 1px solid var(--bs-secondary);
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+.vesitable .owl-nav .owl-prev:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-white);
+}
+
+.vesitable .owl-nav .owl-next {
+    position: absolute;
+    top: -8px;
+    right: 88px;
+    color: var(--bs-primary);
+    padding: 5px 25px;
+    border: 1px solid var(--bs-secondary);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.vesitable .owl-nav .owl-next:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-white);
+}
+/*** vesitable End ***/
+
+
+/*** Banner Section Start ***/
+.banner .banner-btn:hover {
+    background: var(--bs-primary);
+}
+
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('assets/imgs/your-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed; /* Hiệu ứng cuộn trang sang trọng */
+    background-color: #111 !important;
+}
+/*** Banner Section End ***/
+
+
+/*** Facts Start ***/
+.counter {
+    height: 100%;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+}
+
+.counter i {
+    font-size: 60px;
+    margin-bottom: 25px;
+}
+
+.counter h4 {
+    color: var(--bs-primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.counter h1 {
+    margin-bottom: 0;
+}
+/*** Facts End ***/
+
+
+/*** testimonial Start ***/
+.testimonial .owl-nav .owl-prev {
+    position: absolute;
+    top: -58px;
+    right: 0;
+    color: var(--bs-primary);
+    padding: 5px 25px;
+    border: 1px solid var(--bs-secondary);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.testimonial .owl-nav .owl-prev:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-white);
+}
+
+.testimonial .owl-nav .owl-next {
+    position: absolute;
+    top: -58px;
+    right: 88px;
+    color: var(--bs-primary);
+    padding: 5px 25px;
+    border: 1px solid var(--bs-secondary);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.testimonial .owl-nav .owl-next:hover {
+    background: var(--bs-secondary);
+    color: var(--bs-white);
+}
+/*** testimonial End ***/
+
+
+/*** Single Page Start ***/
+.pagination {
+    display: inline-block;
+}
+  
+.pagination a {
+    color: var(--bs-dark);
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+    border: 1px solid var(--bs-secondary);
+    margin: 0 4px;
+}
+  
+.pagination a.active {
+    background-color: var(--bs-primary);
+    color: var(--bs-light);
+    border: 1px solid var(--bs-secondary);
+}
+  
+.pagination a:hover:not(.active) {background-color: var(--bs-primary)}
+
+.nav.nav-tabs .nav-link.active {
+    border-bottom: 2px solid var(--bs-secondary) !important;
+}
+/*** Single Page End ***/
+
+
+/*** Footer Start ***/
+.footer .footer-item .btn-link {
+    line-height: 35px;
+    color: rgba(255, 255, 255, .5);
+    transition: 0.5s;
+}
+
+.footer .footer-item .btn-link:hover {
+    color: var(--bs-secondary) !important;
+}
+
+.footer .footer-item p.mb-4 {
+    line-height: 35px;
+}
+/*** Footer End ***/
+/* Custom styles cho LTJ Jewelry Shop */
+
+/* Màu nền Footer (Xám nhạt) */
+.footer-bg {
+    background-color: #F0F0F0 !important; 
+}
+
+.btn-ltj-gold {
+    background-color: #F0E68C !important;
+    border-color: #F0E68C !important;
+    color: #333 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Tạo độ thoáng cho chữ */
+    padding: 10px 25px;
+    border-radius: 2px; /* Bo góc cực nhẹ để trông tinh tế */
+    transition: all 0.3s ease;
+}
+
+.btn-ltj-gold:hover {
+    background-color: #e6db7e !important; /* Vàng đậm hơn một chút khi hover */
+    border-color: #e6db7e !important;
+    transform: translateY(-2px); /* Nhấc nhẹ nút lên */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-outline-ltj-gold {
+    border: 1px solid #F0E68C !important;
+    color: #F0E68C !important;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.btn-outline-ltj-gold:hover {
+    background-color: #F0E68C !important;
+    color: #333 !important;
+}
+
+/* Tăng cường độ đậm của chữ trong footer */
+.footer h4 {
+    font-weight: 700; 
+}
+/* Custom styles cho LTJ Jewelry Shop */
+/* ... (Giữ nguyên các class footer-bg, text-ltj-gold, btn-ltj-gold) ... */
+
+/* Thêm CSS này để định kiểu cho logo LTJ */
+.logo-ltj {
+    /* Bỏ gạch chân cho liên kết */
+    text-decoration: none !important; 
+}
+
+.logo-ltj h1 span {
+    /* Đổi font chữ (Ví dụ: dùng font 'serif' cổ điển hoặc 'monospace' hiện đại) */
+    font-family: 'serif', Georgia, "Times New Roman" !important;
+    /* Hoặc dùng font hiện đại hơn: 'Montserrat', sans-serif !important; */
+    
+    /* Đảm bảo màu vàng pastel luôn hiển thị, không bị đổi thành màu link xanh */
+    color: #F0E68C !important; 
+    
+    /* Chữ in hoa (nếu cần) */
+    text-transform: uppercase; 
+}
+
+
+/* 2. NAVBAR: MÀU TRẮNG */
+.container-fluid.navbar-ltj-pastel,
+.container-fluid.navbar-ltj-pastel .navbar-collapse {
+    background-color: #FFFFFF !important; /* Thay đổi thành Trắng */
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 1040 !important; 
+}
+
+/* Đảm bảo các link navigation (menu) có màu đen */
+.navbar-ltj-pastel .navbar-nav .nav-link {
+    color: #000000 !important;
+}
+
+/* Đảm bảo các icon Giỏ hàng, Tài khoản, Search màu đen trên nền trắng */
+.navbar-ltj-pastel .fa-shopping-bag,
+.navbar-ltj-pastel .fa-user,
+.navbar-ltj-pastel .fa-search {
+    color: #000000 !important; 
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu-end {
+    /* Đảm bảo dropdown nằm gọn gàng bên phải */
+    left: auto !important;
+    right: 0;
+    min-width: 150px; /* Chiều rộng tối thiểu */
+    padding: 5px 0 !important;
+}
+.navbar-nav .nav-item.dropdown .dropdown-item:hover {
+    background-color: #F0E68C !important; /* Màu nền Vàng Pastel khi hover */
+    color: #000000 !important; 
+}
+/* Xóa mũi tên nhỏ (caret) mặc định của Bootstrap dropdown-toggle */
+.navbar-ltj-pastel .dropdown-toggle::after {
+    display: none !important;
+}
+
+
+
+
+/* SHOP PAGE STYLES */
+
+/* Hiệu ứng cho Card Sản phẩm (Product Card) */
+.product-item {
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    border: 1px solid #e9ecef !important; /* Viền nhẹ */
+}
+
+.product-item:hover {
+    transform: translateY(-5px); /* Nâng nhẹ card khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-item .product-img {
+    overflow: hidden;
+    position: relative;
+    height: 250px; /* Chiều cao cố định cho hình ảnh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; /* Nền trắng cho ảnh */
+}
+
+.product-item .product-img img {
+    object-fit: contain; /* Giữ tỷ lệ và nằm gọn trong khung */
+    max-height: 100%;
+    width: auto; /* Chiều rộng tự động để giữ tỷ lệ */
+    transition: transform 0.5s;
+}
+
+.product-item:hover .product-img img {
+    transform: scale(1.05); /* Hiệu ứng zoom nhẹ */
+}
+
+/* Đảm bảo các cột của Bootstrap có chiều cao bằng nhau */
+.row.g-4 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ép thẻ con lấp đầy chiều cao của cột cha */
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s ease;
+}
+
+/* Phần nội dung (tên, giá) sẽ tự giãn để đẩy nút bấm xuống đáy */
+.product-item .p-4 {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Đẩy các thành phần cách đều nhau */
+}
+
+/* Khung ảnh cố định để không bị lệch hàng */
+.product-item .product-img {
+    height: 250px; 
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+}
+
+.product-item .product-img img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain; /* Giữ nguyên tỉ lệ ảnh, không bị méo */
+}
+
+.product-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    /* Giới hạn hiển thị tối đa 2 dòng, quá sẽ hiện dấu ... */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.8rem; /* (tùy chỉnh theo line-height để giữ khoảng cách cố định) */
+    margin-bottom: 15px;
+}
+
+/* Nút Thêm vào giỏ (Add to Cart Button) */
+.btn-add-to-cart {
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #F0E68C; /* Đổi màu nền khi hover */
+    color: #000 !important;
+}
+
+.btn-add-to-cart:hover i {
+    color: #000 !important; /* Đổi màu icon khi hover */
+}
+
+
+/* Kiểu dáng cho danh sách lọc sản phẩm (Sidebar List Group) */
+.list-group-item {
+    border-left: 5px solid transparent;
+    transition: all 0.3s;
+    font-weight: 500;
+    border-color: transparent; /* Loại bỏ viền mặc định của list group item */
+    padding-left: 0;
+}
+
+.list-group-item:hover {
+    background-color: #fff9e6; /* Nền vàng nhạt khi hover */
+    color: #000;
+    border-left-color: #F0E68C; /* Viền nổi bật màu vàng pastel */
+}
+
+/* Kiểu dáng cho Pagination */
+.pagination a {
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    border-radius: 50rem !important; /* Tròn hơn */
+}
+
+.pagination a.active-page {
+    background-color: #F0E68C !important; 
+    border-color: #F0E68C !important;
+    font-weight: 600;
+    color: #000 !important;
+}
+
+.pagination a:hover:not(.active-page) {
+    background-color: #e9ecef;
+}
+
+/* 1. Nâng cấp Card Sản Phẩm - Sang trọng hơn */
+.product-item {
+    background: #ffffff;
+    border: none !important;                    /* Bỏ viền xám mặc định */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Bóng nhẹ tinh tế */
+    transition: all 0.4s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* 2. Ảnh sản phẩm: nền tối nhẹ + phản ánh ánh sáng */
+.product-item .product-img {
+    height: 280px;                              /* Tăng chiều cao một chút */
+    background: linear-gradient(135deg, #f8f8f8 0%, #e9e9e9 100%); /* Nền gradient nhẹ */
+    position: relative;
+}
+
+.product-item .product-img::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.1) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.product-item:hover .product-img::after {
+    opacity: 1;                                 /* Hiệu ứng ánh sáng lấp lánh khi hover */
+}
+
+.product-item .product-img img {
+    object-fit: cover;                          /* Đổi thành cover để lấp đầy khung */
+    height: 100%;
+    width: 100%;
+}
+
+
+/* 4. Badge danh mục (góc trái trên) sang trọng hơn */
+.position-absolute.bg-secondary {
+    background: rgba(240, 230, 140, 0.9) !important; /* Vàng pastel mờ */
+    color: #000 !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+}
+
+/* 5. Tên sản phẩm và giá */
+.product-item h4 {
+    font-family: 'Playfair Display', serif;     /* Font sang trọng hơn */
+    font-weight: 700;
+    color: #333;
+}
+
+.product-item .fs-5.fw-bold {
+    color: #b8975a !important;                  /* Vàng đậm hơn một chút cho giá */
+    font-size: 1.4rem !important;
+}
+
+/* 6. Sidebar danh mục - tinh tế hơn */
+.list-group-item.active {
+    background: #F0E68C !important;
+    color: #000 !important;
+    border-left-color: #d4af37 !important;
+    font-weight: 700;
+}
+
+.list-group-item:hover:not(.active) {
+    background: #fffdf0 !important;
+    border-left-color: #F0E68C;
+    padding-left: 10px !important;
+}
+/* ============================================
+   PRODUCT DETAIL GALLERY - CSS RIÊNG BIỆT
+   Dùng cho shop-detail.php với main_image + image1, image2
+   ============================================ */
+
+/* Container chính của gallery */
+.product-detail-gallery {
+    position: relative;
+}
+
+/* Ảnh chính lớn */
+.product-detail-gallery .main-image-container {
+    border: 1px solid #eee;
+    background: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    max-height: 550px; /* Giới hạn chiều cao tối đa để không quá dài */
+    height: auto;
+}
+
+/* Zoom nhẹ khi hover vào ảnh chính - rất phù hợp để xem chi tiết kim cương */
+.product-detail-gallery .main-image-container:hover img {
+    transform: scale(1.15);
+}
+
+/* Dãy thumbnails nhỏ bên dưới */
+.product-detail-gallery .thumbnails-row {
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+/* Mỗi thumbnail */
+.product-detail-gallery .thumbnail-item {
+    opacity: 0.75;
+    transition: all 0.3s ease;
+    border: 3px solid transparent !important;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-gallery .thumbnail-item:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Thumbnail đang được chọn (active) */
+.product-detail-gallery .thumbnail-item.active {
+    opacity: 1;
+    border-color: #F0E68C !important; /* Viền vàng pastel thương hiệu LTJ */
+    box-shadow: 0 0 0 3px rgba(240, 230, 140, 0.5);
+    transform: scale(1.05);
+}
+
+/* Ảnh bên trong thumbnail */
+.product-detail-gallery .thumbnail-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive cho mobile và tablet */
+@media (max-width: 992px) {
+    .product-detail-gallery .main-image-container {
+        height: 500px;
+    }
+    
+    .product-detail-gallery .thumbnail-item {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-detail-gallery .main-image-container {
+        height: 400px;
+    }
+    
+    .product-detail-gallery .thumbnails-row {
+        justify-content: center !important;
+        gap: 10px !important;
+    }
+    
+    .product-detail-gallery .thumbnail-item {
+        width: 85px !important;
+        height: 85px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-detail-gallery .main-image-container {
+        height: 350px;
+    }
+    
+    .product-detail-gallery .thumbnail-item {
+        width: 75px !important;
+        height: 75px !important;
+    }
+}/* --- LUXURY ABOUT US PAGE --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap');
+
+:root {
+    --ltj-gold: #F0E68C;
+    --ltj-dark-gold: #B8860B;
+    --ltj-black: #1a1a1a;
+}
+
+/* 1. Header với hiệu ứng Parallax nhẹ */
+.about-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/imgs/banner/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Tạo hiệu ứng cuộn ảnh */
+    padding: 150px 0;
+    color: #fff;
+    text-align: center;
+}
+
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: var(--ltj-gold);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* 2. Tiêu đề phần (Section Title) */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 25px;
+    margin-bottom: 35px;
+    color: var(--ltj-black);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--ltj-dark-gold), var(--ltj-gold));
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+/* Hiệu ứng khi lướt chuột qua tiêu đề */
+.section-title:hover::after {
+    width: 120px;
+}
+
+/* 3. Khung ảnh nghệ thuật (Artistic Image Frame) */
+.about-img-frame {
+    position: relative;
+    padding: 20px;
+    z-index: 1;
+}
+
+/* Tạo viền vàng lệch tạo cảm giác thiết kế độc bản */
+.about-img-frame::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--ltj-gold);
+    transform: translate(15px, 15px);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.about-img-frame img {
+    width: 100%;
+    height: auto;
+    filter: brightness(95%);
+    transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.about-img-frame:hover img {
+    filter: brightness(110%);
+    transform: scale(1.05);
+}
+
+.about-img-frame:hover::before {
+    transform: translate(0, 0);
+    background: rgba(240, 230, 140, 0.05);
+}
+
+/* 4. Hộp giá trị (Value Box) */
+.value-box {
+    text-align: center;
+    padding: 50px 30px;
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px; /* Bo góc nhẹ cho sang */
+    transition: all 0.4s ease;
+    height: 100%;
+}
+
+.value-box:hover {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    transform: translateY(-10px);
+    border-color: var(--ltj-gold);
+}
+
+.value-icon {
+    font-size: 3rem;
+    color: var(--ltj-dark-gold);
+    margin-bottom: 25px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.value-box:hover .value-icon {
+    transform: rotateY(360deg);
+    color: var(--ltj-gold);
+}
+
+.value-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.value-box p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+.value-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Căn trên */
+    align-items: center;
+    transition: 0.4s;
+}
+
+.value-box p {
+    margin-top: auto; /* Đẩy nội dung văn bản cân đối */
+    margin-bottom: 0;
+}
+
+/* Màu chữ vàng Pastel cho banner */
+.text-ltj-gold {
+    color: #F0E68C !important;
+}
+
+/* --- TRANG CHỦ LUXURY --- */
+.product-card {
+    border: none;
+    transition: all 0.4s ease;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-img-wrapper {
+    position: relative;
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+.product-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 15px;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 2;
+}
+
+.label-new { background: #28a745; }
+.label-hot { background: #dc3545; }
+.label-featured { background: #B8860B; }
+
+.product-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.product-price {
+    color: #B8860B;
+    font-weight: bold;
+}
+
+.section-divider {
+    width: 60px;
+    height: 3px;
+    background: #F0E68C;
+    margin: 20px auto;
+}
+
+/* Nút Khám Phá Ngay Luxury */
+.btn-primary.px-5.py-3 {
+    background-color: #1a1a1a !important; /* Nền đen sâu */
+    color: #F0E68C !important;           /* Chữ vàng Pastel */
+    border: 1px solid #F0E68C !important;
+    border-radius: 0 !important;          /* Góc vuông sang trọng */
+    text-transform: uppercase;
+    letter-spacing: 4px;                  /* Giãn chữ rộng tạo vẻ thanh thoát */
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;                     /* Để ẩn vệt sáng lướt qua */
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Hiệu ứng vệt sáng kim cương */
+.btn-primary.px-5.py-3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.3) 50%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.btn-primary.px-5.py-3:hover::before {
+    left: 150%;
+    transition: all 0.8s ease;
+}
+
+.btn-primary.px-5.py-3:hover {
+    background-color: #F0E68C !important; /* Đổi màu nền sang vàng */
+    color: #1a1a1a !important;            /* Chữ chuyển sang đen */
+    box-shadow: 0 0 20px rgba(240, 230, 140, 0.5); /* Phát sáng nhẹ */
+    transform: translateY(-3px);
+}
